@@ -17,7 +17,7 @@ func main() {
 	router := gin.Default()
 	router.GET("/roll/:faces/:amount/:mod", rolldice.MakeRoll)
 
-	err := router.Run("sdf" + conf.Address)
+	err := router.Run(conf.Address)
 	if err != nil {
 		log.Fatalf("Server cannot run: %s", err)
 	}
